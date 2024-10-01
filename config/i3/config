@@ -28,7 +28,7 @@ bindsym $mod+f exec firefox
 bindsym $mod+b exec --no-startup-id  /usr/local/bin/zen
 
 # Clipse open clipboard
-bindsym $mod+c exec alacritty -e zsh -c "i3-msg 'floating enable' && /usr/local/bin/clipse"
+bindsym Mod4+v exec alacritty -e zsh -c "i3-msg 'floating enable' && /usr/local/bin/clipse"
 
 # Shutdown
 bindsym $mod+Escape exec --no-startup-id ~/.config/rofi/power/powermenu.sh
