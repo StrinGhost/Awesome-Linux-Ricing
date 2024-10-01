@@ -169,4 +169,4 @@ C-Space C-Right Resize the pane right
  **Once all sessions are killed, tmux exits.**
 
 
-![[2024-September_22-09.svg]]
+![Tmux](2024-September_22-09.svg)
