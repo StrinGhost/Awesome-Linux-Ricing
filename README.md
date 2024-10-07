@@ -44,9 +44,9 @@
 
 ## `📸` Screenshots
 
-![base]()
-![rofi]()
-![full]()
+![DMenu](https://github.com/StrinGhost/Awesome-Linux-Ricing/blob/cbde27d6da12881e707c9ce4a4e85b31da8473c8/Assets/DMenu.png)
+![PMenu](https://github.com/StrinGhost/Awesome-Linux-Ricing/blob/cbde27d6da12881e707c9ce4a4e85b31da8473c8/Assets/PowerMenu.png)
+![full](https://github.com/StrinGhost/Awesome-Linux-Ricing/blob/cbde27d6da12881e707c9ce4a4e85b31da8473c8/Assets/full.png)
 
 ## `💾` Installation
 Clone the repo `git clone https://github.com/StrinGhost/Awesome-Linux-Ricing.git && cd Awesome-Linux-Ricing`
@@ -61,7 +61,7 @@ git clone https://github.com/StrinGhost/Awesome-Linux-Ricing.git && cd Awesome-L
 After successfully installing everything, make sure you reboot your system.
 Once you reboot and you're in the login menu, you will have to select `i3` from the drop-down list and just log in to your brand new kali rice.
 
-![i3wm]()
+![i3wm](https://github.com/StrinGhost/Awesome-Linux-Ricing/blob/cbde27d6da12881e707c9ce4a4e85b31da8473c8/Assets/i3wm.png)
 
 
 ## `⌨️` KeyBindings
