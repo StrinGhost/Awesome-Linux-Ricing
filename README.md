@@ -1,4 +1,4 @@
-## `🐲` kali
+## `🐲` KaliGhost
 
 >[!Important]
 >**This is meant to be installed on a _fresh_ Kali install**. You _could_ do this on your battle-hardened Kali machine with all your previous configurations, but make sure you alter the script to preserve your previous configs or back them up first. 
@@ -33,7 +33,7 @@
         <td>Rofi</td>
     </tr>
     <tr>
-        <td><b>Bar</b></td>
+        <td><b>StatusBar</b></td>
         <td>Polybar</td>
     </tr>
     <tr>
@@ -98,5 +98,3 @@ Feel free to modfiy any configration as you like these configurations suites me 
 ## `❓` Why
 I created it to simplify the process of setting up a customized Kali Linux environment. As a pentester, I've often found myself spending hours configuring and installing various tools and configurations from scratch. This script aims to automate that process, making it easy for users to get started with a fully functional and customized Kali Linux environment.
 
-## LICENCE
-[LICENCE](LICENCE)
