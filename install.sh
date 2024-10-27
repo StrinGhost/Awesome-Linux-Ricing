@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-CMD_OUTPUT="$CMD_OUTPUT"
+CMD_OUTPUT="&>>kalighost.out"
 #######################################################################
 
 
@@ -51,9 +51,9 @@ echo "
 ⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⠀
 ⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡉⠉⠋⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠙⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠇⠀⠰⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿" | lolcat
-echo "\n\n\n"
+echo -e "\n\n\n"
 echo "$(figlet -f slant 'KaliGhost')" | lolcat
-echo "\n\n\n"
+echo -e "\n\n\n"
 echo "##################################################
 #  ____ ____ ____
 # ╭━━━┳━━━╮  StrinGhost
@@ -63,15 +63,14 @@ echo "##################################################
 # ┃╰━╯┃╰┻━┃  https://discord.gg/wtymSq5c
 # ╰━━━┻━━━╯
 ##################################################" | lolcat
-echo "\n\n\n"
+echo -e "\n\n\n"
 
 echo "Updating package database and installing essential packages..." | lolcat
-sudo apt-get install -y zsh python3 npm arandr flameshot arc-theme feh i3blocks i3status i3 i3-wm lxappearance python3-pip rofi unclutter cargo papirus-icon-theme neofetch picom betterlockscreen wtmpdb bat eza net-tools fzf tmux open-vm-tools btop stow ripgrep gh  $CMD_OUTPUT
-sudo apt-get install -y libxcb-shape0-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev autoconf meson $CMD_OUTPUT
-sudo apt-get install -y libxcb-render-util0-dev libxcb-shape0-dev libxcb-xfixes0-dev i3lock-fancy polybar $CMD_OUTPUT
+sudo apt-get install -y zsh python3 npm arandr flameshot arc-theme feh i3 polybar lxappearance python3-pip rofi unclutter-xfixes cargo papirus-icon-theme neofetch picom betterlockscreen wtmpdb bat eza net-tools fzf tmux open-vm-tools btop ripgrep gh  $CMD_OUTPUT
+sudo apt-get install -y libxcb-shape0-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev autoconf meson libxcb-render-util0-dev libxcb-shape0-dev libxcb-xfixes0-dev $CMD_OUTPUT
 
-# install Alacritty , obsidian
-if dpkg -l | grep -q "obsidian" || which obsidian > /dev/null; then
+# install Alacritty & Obsidian
+if sudo dpkg -l | grep -q "obsidian" || which obsidian > /dev/null; then
    echo "Obsidian already Installed." | lolcat
 else
    echo "Installing Obsidian" | lolcat
@@ -81,7 +80,7 @@ else
    rm obsidian_1.6.7_amd64.deb
 fi
 
-if dpkg -l | grep -q "alacritty" || which alacritty > /dev/null; then
+if sudo dpkg -l | grep -q "alacritty" || which alacritty > /dev/null; then
    echo "Alacritty already Installed." | lolcat
 else
    echo "Installing Alacritty" | lolcat
@@ -105,17 +104,17 @@ sudo mkdir -p /usr/share/fonts/nerd-fonts
 if fc-list | grep -qi "Iosevka"; then
     echo "Iosevka Nerd Font already installed" | lolcat
 else
-    echo "Installing Iosevka fonts" | lolcat
+    echo "Installing Iosevka Nerd font" | lolcat
     wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip $CMD_OUTPUT
     unzip Iosevka.zip -d /usr/share/fonts/nerd-fonts/Iosevka $CMD_OUTPUT
     rm Iosevka.zip
 fi
 
 # Check and install RobotoMono Nerd Font
-if fc-list | grep -qi "RobotoMono"; then
+if fc-list | grep -qi "RobotoMono Nerd Font"; then
     echo "RobotoMono Nerd Font already installed" | lolcat
 else
-    echo "Installing RobotoMono fonts" | lolcat
+    echo "Installing RobotoMono font" | lolcat
     wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/RobotoMono.zip $CMD_OUTPUT
     unzip RobotoMono.zip -d /usr/share/fonts/nerd-fonts/RobotoMono $CMD_OUTPUT
     rm RobotoMono.zip
@@ -125,7 +124,7 @@ fi
 if fc-list | grep -qi "Hack"; then
     echo "Hack Nerd Font already installed" | lolcat
 else
-    echo "Installing Hack Nerd fonts" | lolcat
+    echo "Installing Hack Nerd font" | lolcat
     wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Hack.zip $CMD_OUTPUT
     unzip Hack.zip -d /usr/share/fonts/nerd-fonts/Hack $CMD_OUTPUT
     rm Hack.zip
@@ -133,7 +132,7 @@ fi
 sudo fc-cache -f
 
 # Copy configuration files
-echo "\nCopying configuration files..." | lolcat
+echo -e "\nCopying configuration files..." | lolcat
 cp -r config/* ~/.config/
 chmod +x chbg
 cp chbg ~/.chbg
@@ -190,24 +189,23 @@ sudo apt remove --purge qterminal
 sudo apt autoremove
 
 # Prompt user to update packages
-echo "\n\n\n(Recommended) Do you want to update the packages (y/n):" | lolcat
+echo -e "\n\n\n(Recommended) Do you want to update the packages (y/n):" | lolcat
 read -r upackage
 
 # Check user input and take action
 if [[ "$upackage" == "n" || "$upackage" == "N" ]]; then
-    echo "\nPlease update your packages after a reboot using the command 'sudo apt update && sudo apt upgrade'" | lolcat
+    echo -e "\nPlease update your packages after a reboot using the command 'sudo apt update && sudo apt upgrade'" | lolcat
 else
     echo "Updating Packages" | lolcat
     sudo apt update  -y $CMD_OUTPUT
-    echo "\nUpgrading Packages this may take sometime to complete\n" | lolcat
+    echo -e "\nUpgrading Packages this may take sometime to complete\n" | lolcat
     sudo apt upgrade -y 
     clear
 fi
 
 # Prompt user for reboot
-echo "\n\n(StrinGhost) (+) KaliGhost Installation Completed!\n\nOutputs saved in installation_output.txt in case of any error consider checking it out." | lolcat
-
-echo "\n\n\nReboot required to see the changes. Do you want to reboot now (y/n):" | lolcat
+echo -e "\n\n(StrinGhost) (+) KaliGhost Installation Completed!\n\nOutputs saved in kalighost.out in case of any error consider checking it out." | lolcat
+echo -e "\n\n\nReboot required to see the changes. Do you want to reboot now (y/n):" | lolcat
 read -r option
 
 # Check user input and take action
