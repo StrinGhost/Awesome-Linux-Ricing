@@ -10,7 +10,7 @@
     </tr>
     <tr>
         <td><b>Window Manager</b></td>
-        <td>I3</td>
+        <td>i3</td>
     </tr>
     <tr>
         <td><b>Terminal</b></td>
@@ -26,7 +26,10 @@
     </tr>
     <tr>
         <td><b>Font</b></td>
-        <td>Iosevka Nerd Font</td>
+        <td>JetBrains Mono Nerd</td>
+    <tr>
+        <td><b>File Manager</b></td>
+        <td>Dolphin</td>
     </tr>
     <tr>
         <td><b>Launcher</b></td>
@@ -49,28 +52,28 @@
 ![full](Assets/full.png)
 
 ## `💾` Installation
-Clone the repo `git clone https://github.com/StrinGhost/Awesome-Linux-Ricing.git && cd Awesome-Linux-Ricing`
+Clone the repo `git clone https://github.com/StrinGhost/KaliGhost.git && cd KaliGhost`
 
 Simply `chmod +x install.sh` the installation script if it isn't already marked as executable and then just run it with `sudo ./install.sh`. 
 
 #### One Command Setup for Lazy Sloths🦥
 ```bash
-git clone https://github.com/StrinGhost/Awesome-Linux-Ricing.git && cd Awesome-Linux-Ricing && sudo chmod +x install.sh && sudo ./install.sh
+git clone https://github.com/StrinGhost/KaliGhost.git && cd KaliGhost && sudo ./install.sh
 ```
 
 After successfully installing everything, make sure you reboot your system.
-Once you reboot and you're in the login menu, you will have to select `i3` from the drop-down list and just log in to your brand new kali rice.
+Once you reboot and you're in the login menu, you will have to select `i3` from the drop-down list and just log in.
 
 ![i3wm](Assets/i3wm.png)
 
 
 ## `⌨️` KeyBindings
 
-Feel free to modfiy any configration as you like these configurations suites me best. If you feel i should update or add something dont hasitate opeening an issue or pull request i will try to respond as quick as possible
+Feel free to modfiy any configuration as you like these configurations suites me best. If you feel I should update or add something don't hesitate opeening an issue or pull request I will try to respond as quick as possible.
 
 <table>
     <tr>
-        <td><b>I3</b></td>
+        <td><b>i3</b></td>
         <td><a href=config/i3>ReadMe</a></td>
     </tr>
     <tr>
