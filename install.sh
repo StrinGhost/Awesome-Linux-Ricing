@@ -65,7 +65,7 @@ echo "##################################################
 echo -e "\n\n\n"
 
 echo "Updating package database and installing essential packages..." | lolcat
-sudo apt-get install -y zsh python3 npm arandr flameshot arc-theme feh i3 polybar lxappearance python3-pip rofi unclutter-xfixes cargo papirus-icon-theme neofetch picom betterlockscreen wtmpdb bat eza net-tools fzf tmux open-vm-tools btop ripgrep gh  &>> kalighost.out
+sudo apt-get install -y zsh python3 npm arandr flameshot arc-theme feh i3 polybar lxappearance python3-pip rofi unclutter-xfixes papirus-icon-theme neofetch picom betterlockscreen wtmpdb bat eza net-tools fzf tmux open-vm-tools btop ripgrep gh  &>> kalighost.out
 sudo apt-get install -y libxcb-shape0-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev autoconf meson libxcb-render-util0-dev libxcb-shape0-dev libxcb-xfixes0-dev &>> kalighost.out
 
 # install Alacritty & Obsidian
@@ -179,12 +179,12 @@ fi
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..." | lolcat
-cp zshrc ~/.zshrc
 sh -c "$(curl -fsSL https://install.ohmyz.sh)" "" --unattended &>> kalighost.out
+cp zshrc ~/.zshrc
 chsh -s $(which zsh)
 
 # Remove Packages
-sudo apt remove --purge qterminal
+#sudo apt remove --purge qterminal thunar
 sudo apt autoremove
 
 # Prompt user to update packages
@@ -204,7 +204,7 @@ fi
 
 # Prompt user for reboot
 echo -e "\n\n(StrinGhost) (+) KaliGhost Installation Completed!\n\nOutputs saved in kalighost.out in case of any error consider checking it out." | lolcat
-echo -e "\n\n\nReboot required to see the changes. Do you want to reboot now (y/n):" | lolcat
+echo -e "\nReboot required to see the changes. Do you want to reboot now (y/n):" | lolcat
 read -r option
 
 # Check user input and take action
